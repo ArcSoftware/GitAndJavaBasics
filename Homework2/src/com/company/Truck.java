@@ -8,7 +8,7 @@ public class Truck {
     private int year;
     private String make;
     private String model;
-    private int millage;
+    public static final int millage = 50;
 
     public double milesPerYear() {
         return (millage) / (2017 - year);
@@ -39,12 +39,10 @@ public class Truck {
     public void setModel(String model) {
         this.model = model;
     }
-    public int getMillage() {
-        return millage;
-    }
-    public void setMillage(int millage) {
-        this.millage = millage;
+
+        
+
     }
 
-}
+
 
