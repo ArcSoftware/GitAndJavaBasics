@@ -8,36 +8,36 @@ public class Main {
 
         System.out.println("The current year is " + currentYear + ".");
 
-        Car a = new Car();
-        a.make = "Ferrari";
-        a.model = "F50GT";
-        a.year = 2003;
-        a.millage = 3200;
-        a.type = "Coupe";
+        Car a = new Car("Ferrari", "F50GT", 2003, 3200, "Coupe");
+        a.setMake("Ferrari");
+        a.setModel("F50GT");
+        a.setYear(2003);
+        a.setMillage(3200);
+        a.setType("Coupe");
 
-        Car b = new Car();
-        b.make = "Pagani";
-        b.model = "Zonda R";
-        b.year = 2016;
-        b.millage = 499;
-        b.type = "Coupe";
+        Car b = new Car("Pagani", "Zonda R", 2016, 499, "Coupe");
+        b.setMake("Pagani");
+        b.setModel("Zonda R");
+        b.setYear(2016);
+        b.setMillage(499);
+        b.setType("Coupe");
 
-        Tank c = new Tank();
-        c.carsBlownUp = 47;
-        c.machineGun = true;
-        c.mainGun = "Rail Gun";
-        c.wallsDestroyed = 2;
-        c.weight = 62.2;
+        Tank c = new Tank(47, true, "Rail Gun", 2, 62.2);
+        c.setCarsBlownUp(47);
+        c.setMachineGun(true);
+        c.setMainGun("Rail Gun");
+        c.setWallsDestroyed(2);
+        c.setWeight(62.2);
 
-        Boat d = new Boat();
-        d.make = "Dubois";
-        d.model = "SR52 Blackbird";
-        d.motorType = "Triple Volvo IPS 600";
-        d.year = 2010;
-        d.hours = 7255.22;
+        Boat d = new Boat("Dubois", "SR52 Blackbird", "Triple Volvo IPS 600,", 2010, 7255.22);
+        d.setMake("Dubois");
+        d.setModel("SR52 Blackbird");
+        d.setMotorType("Triple Volvo IPS 600");
+        d.setYear(2010);
+        d.setHours(7255.22);
 
-
-        System.out.format("The age of inventory item D is %d.", d.modelAge());
-        System.out.format("The damage the tank has caused ranges from $%.2f to $%.2f", c.minDamage(), c.maxDamage());
+        System.out.println(d.getHours());
+        System.out.format("The age of inventory item D is %d. \n", d.modelAge());
+        System.out.format("The damage the tank has caused ranges from $%.2f to $%.2f.", c.minDamage(), c.maxDamage());
     }
 }
